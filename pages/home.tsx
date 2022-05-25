@@ -1,24 +1,23 @@
 
-import PageBase from 'douhub-ui-web/build/cjs/pages/base';
 import { TestMenu } from 'douhub-ui-web-boilerplate';
 
-const Home = (props: Record<string, any>) => {
+import Head from 'next/head'
+const Home = () => {
 
-    return <PageBase
-        {...props}
-        slug="home"
-        Header={() => <></>}
-        Footer={() => <></>}
-    >
-        <div className="w-full p-12">
-            <div className="mx-auto flex">
-                <h1 className="text-4xl font-extrabold text-gray-900 mr-8">Hello World</h1>
-                <div className="text-lg border rounded px-4 py-1">
-                    <TestMenu text="Menu" />
-                </div>
+    return <div className="container">
+        <Head>
+            <title>Create Next App</title>
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
+
+        <main className="p-12 w-full">
+            <div className="p-12 flex mx-auto">
+                <div className="mr-2 text-2xl font-bold" >Hello World 2</div>
+                <div className="rounded border p-1"><TestMenu text="Menu"/></div>
             </div>
-        </div>
-    </PageBase>
-};
+        </main>
+    </div>
+}
 
 export default Home
+

@@ -1,13 +1,11 @@
 import type { AppProps } from 'next/app';
-import { AppBase } from 'douhub-ui-web-basic';
+import React from 'react';
 import '../styles/global.css';
-import {CssCenter} from 'douhub-ui-store';
 
-function App(appProps: AppProps) {
-    return <>
-        <CssCenter/>
-        <AppBase {...appProps} />
-    </>
+function App(props: AppProps) {
+  const { pageProps } = props;
+  const Component:any = props.Component;
+  return <Component {...pageProps} />
 }
 
 export default App
